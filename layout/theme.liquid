@@ -49,7 +49,7 @@
 <body>
   <!-- Begin toolbar -->
   <!-- *Original Nav -->
-  <div class="toolbar-wrapper">
+<!--   <div class="toolbar-wrapper">
     <div class="toolbar clearfix">
       <div class="span12 clearfix">
         <ul class="unstyled">
@@ -72,7 +72,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- End toolbar -->
   
   <!-- CUSTOM TOP NAV BEGINS -->
@@ -88,6 +88,16 @@
       <nav class="mobile clearfix">
         {% include 'mobile-menu' %}
       </nav> 
+      <div class="search-drop">
+        <ul class="unstyled">
+          <li class="search-field">
+            <form class="search" action="/search">
+              <input type="image" src="{{ 'icon-search.png' | asset_url }}" alt="Go" id="go">
+              <input type="text" name="q" class="search_box" placeholder="Search" value="{{ search.terms }}" />
+            </form>
+          </li>
+        </ul>
+      <div>
     </section>
   </div>
   <!-- CUSTOM TOP NAV ENDS -->
