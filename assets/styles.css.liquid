@@ -785,8 +785,9 @@ ul.tabs { zoom: 1; }
 /* This unique grid is to always be placed inside a span12 to keep alignment with 15px margin right and left */
 
 /* Fixed Nav */
-#main-nav-container { position: absolute; z-index: 999; width: 100%; left: 0; top: 0; height: auto; padding: 8px 0; text-align: center; background: url('{{ 'nav_bg.png' | asset_url }}') repeat;}
+#main-nav-container { position: absolute; z-index: 9999; width: 100%; left: 0; top: 0; height: auto; padding: 8px 0; text-align: center; background: url('{{ 'nav_bg.png' | asset_url }}') repeat;}
 .nav-logo { position: absolute; left: 22px; top: 12px;}
 .nav-logo img { display: block; width: auto;}
-.main-nav { text-align: center;}
-.nav-listing li { display: inline-block; text-decoration: none;}
+.main-nav { text-align: center; margin: 0 auto;}
+.main-nav ul li { text-decoration: none; display: inline-block;}
+

@@ -49,7 +49,7 @@
 <body>
   <!-- Begin toolbar -->
   <!-- *Original Nav -->
-<!--   <div class="toolbar-wrapper">
+  <div class="toolbar-wrapper">
     <div class="toolbar clearfix">
       <div class="span12 clearfix">
         <ul class="unstyled">
@@ -72,156 +72,22 @@
         </ul>
       </div>
     </div>
-  </div> -->
+  </div>
   <!-- End toolbar -->
   
   <!-- CUSTOM TOP NAV BEGINS -->
-  <section id="nav">
+  <section id="nav">  
     <div id="main-nav-container">
       <div class = "nav-logo">
         <a href="/"><img src="{{ 'logo.png' | asset_url }}"> 
       </div>
-        <ul class ="nav-listing">
-          <li>
-            <a href="/" class=""><span>HOME</span></a>
-          </li>
-          <li>
-            <a href="/" class=""><span>HOME</span></a>
-          </li>
-          <li>
-            <a href="/" class=""><span>HOME</span></a>
-          </li>
-        </ul>
+      <nav class="main">
+        {% include 'dropdown' %}
+      </nav> 
     </div>
   </section>
-
-  <div id="transparency" class="wrapper">
-    <section id="nav">  
-      <div class="row">
-        <div class="span12">
-          <nav class = "main">  
-            <ul class="horizontal fl unstyled clearfix">
-              <li class="nav-listing">
-                <a href="/" class="nav-list"><span>HOME</span></a>
-              </li>
-              <li class= "nav-listing">
-                <a href="/collections/all" class="nav-list"><span>ABOUT</span></a>
-              </li>
-              <li class= "nav-listing">
-                <a href="/" class="nav-list"><span>BLOG</span></a>
-              </li>
-            </ul>
-            <ul class = "horizontal fl unstyled clearfix" id ="nav-centre">
-              <li>
-                <a href="/" id="nav-logo"></a>
-              </li>
-            </ul>
-<!--             <ul class = "horizontal fr unstyled clearfix">
-              <li class="nav-listing">
-                <a href="/" class="nav-list"><span>SEARCH</span></a>
-              </li>
-              <li class= "nav-listing">
-                <a href="/" class="nav-list"><span>EXPERIENCE(BLOG?)</span></a>
-              </li>
-              <li class= "nav-listing">
-                <a href="/cart" class="nav-list"><span>CART</span></a>
-              </li>
-            </ul> -->
-          {% include 'dropdown' %}
-          </nav>
-          <nav class="mobile clearfix">
-            {% include 'mobile-menu' %}
-          </nav>
-        </div>
-      </div>
-    </section>
-  </div>
   <!-- CUSTOM TOP NAV ENDS -->
 
-  <!-- BEGIN Right NAV -->
-  <!--   <div id="transparency" class="wrapper">
-    <div class="row" id="top-nav">      
-      {% if settings.navigation_alignment == "right" %}
-      <div class="row" id="header">
-        <div class="span12">
-          <div class="span3 inner-left">
-            <div class="logo">
-              {% if settings.use_logo %}
-              <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
-              {% if template == 'index' %}
-              <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
-              {% endif %}
-              {% else %}              
-              <h1><a href="/">{{ shop.name }}</a></h1>
-              {% endif %}
-            </div> 
-          </div> 
-          <section id="nav">
-            <div class="span9 inner-right">
-              <nav class="main">
-                <ul class="unstyled search-position">
-                  <li class="search-field">
-                    <form class="search" action="/search">
-                      <input type="image" src="{{ 'icon-search.png' | asset_url }}" alt="Go" id="go">
-                      <input type="text" name="q" class="search_box" placeholder="Search" value="{{ search.terms }}" />
-                    </form>
-                  </li>
-                </ul>
-                <ul class="horizontal fr unstyled clearfix">
-                  <li class="nav-listing">
-                    <a href="/" class="nav-list"><span>HOME</span></a>
-                  </li>
-                  <li class= "nav-listing">
-                    <a href="/" class="nav-list"><span>OTHER</span></a>
-                  </li>
-                  <li class= "nav-listing">
-                    <a href="/" class="nav-list"><span>AGAIN</span></a>
-                  </li>
-                </ul>
-              {% include 'dropdown' %}
-              </nav> 
-              <nav class="mobile clearfix">
-                {% include 'mobile-menu' %}
-              </nav>
-            </div> 
-          </section> 
-        </div> 
-      </div> 
-      {% endif %}
-    </div>
-  </div> -->
-  <!-- End right navigation -->
-      
-      <!-- Begin below navigation NOT USING BELOW NAVIGATION -->
-<!--       {% if settings.navigation_alignment == "below" %}
-      <div class="span12 clearfix">
-        <div class="logo">
-          {% if settings.use_logo %}
-          <a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a>
-          {% if template == 'index' %}
-          <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
-          {% endif %}
-          {% else %}
-          <h1><a href="/">{{ shop.name }}</a></h1>
-          {% endif %}
-        </div> 
-      </div> 
- -->      
-<!--       <section id="nav" class="row">
-        <div class="span12">
-          <nav class="main">
-            {% include 'dropdown' %}
-          </nav> 
- -->          <!-- /.main -->
-<!--           <nav class="mobile clearfix">
-            {% include 'mobile-menu' %}
-          </nav> 
- -->          <!-- /.mobile --> 
-<!--             </div> 
-      </section> 
-      {% endif %}
- -->      <!-- End below navigation -->
-  
 
 <!-- CL: THIS IS WHERE INDEX.LIQUID PARTIAL IS INPUT -->
   <div>
