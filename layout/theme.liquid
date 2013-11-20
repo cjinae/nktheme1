@@ -76,16 +76,20 @@
   <!-- End toolbar -->
   
   <!-- CUSTOM TOP NAV BEGINS -->
-  <section id="nav">  
-    <div id="main-nav-container">
+    
+  <div id="main-nav-container">
       <div class = "nav-logo">
-        <a href="/"><img src="{{ 'logo.png' | asset_url }}"> 
+        <a href="/"><img src="{{ 'logo.png' | asset_url }}"></a>
       </div>
+    <section id="nav">
       <nav class="main">
         {% include 'dropdown' %}
+      </nav>
+      <nav class="mobile clearfix">
+        {% include 'mobile-menu' %}
       </nav> 
-    </div>
-  </section>
+    </section>
+  </div>
   <!-- CUSTOM TOP NAV ENDS -->
 
 
