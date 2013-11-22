@@ -118,8 +118,13 @@ jQuery(document).ready(function($){
   });
   
   // CL Edits for Nav Search //
+  $('html').click(function() {
+    $(".search-drop").hide()
+  });
+
   $("li.home-icon-search").click(function(){
-    $(".search-drop").css("display", "block");
+    event.stopPropagation();
+    $(".search-drop").show();
   });
 
 
