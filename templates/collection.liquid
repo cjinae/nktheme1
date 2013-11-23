@@ -2,7 +2,6 @@
 <div id="transparency" class="wrapper">
   <div class="row">       
     <section id="content" class="clearfix">
-
       <div id="collection">
         {% paginate collection.products by settings.pagination_limit %}
         <!-- Begin collection info -->
@@ -28,6 +27,16 @@
             </div>
             <!-- End breadcrumb -->
             
+            <!-- Begin secondary navigation -->
+            <div>
+              <ul>
+                {% for link in linklists.collections.links %}
+                  <li>{{ link.title | link_to: link.url }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+            <!-- End secondary navigation -->
+
             <!-- Begin sort collection -->
             <div class="clearfix">
               <h1 class="collection-title">{{ collection.title }}</h1>
