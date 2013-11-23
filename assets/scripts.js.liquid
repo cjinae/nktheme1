@@ -118,16 +118,17 @@ jQuery(document).ready(function($){
   });
   
   // CL Edits for Nav Search //
-  $('html').click(function() {
-    $(".search-drop").hide()
+  $('.tool-nav').click(function(){
+    $('.search-drop').show();
   });
 
-  $("li.home-icon-search").click(function(){
-    event.stopPropagation();
-    $(".search-drop").show();
+  $(document).mouseup(function(e) {
+    var container = $('.tool-nav')
+    var search = $('.search-drop');
+    if (!container.is(e.target) //if target of the click isn't the container
+      && container.has(e.target).length === 0) // nor a descendant of the container
+    {search.hide()}
   });
-
-
 
 
 }); // end document ready
